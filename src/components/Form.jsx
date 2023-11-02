@@ -1,31 +1,36 @@
 import { Input } from "@material-tailwind/react";
 import { Component } from "react";
+import Button from "./Button";
 
 
 class Form extends Component {
     render() {
         return (
             <>
-            <div>Enter your text</div>
-                <div className="w-full">
+            <div className="w-full mt-10">
+                <div>Enter your text</div>
+                <div flex space-x-4 className="mb-3 pt-5">
+                    <input size="lg" type="text" placeholder="My name is Elon and my SSN is 435435465" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
+                </div>
+            </div>
+            <div class="h-56 grid grid-cols-2 gap-4 content-center w-full">
+                <div>
+                <div>Private AI</div>
+                    {/* <Button>Text redact</Button>
+                    <Button>Synthetic PII</Button>
+                    <Button>Masked PII</Button> */}
                     <div flex space-x-4 className="mb-3 pt-5">
-                        <input size="lg" type="text" placeholder="Enter your text" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
+                        <input size="lg" type="text" placeholder="Response" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
                     </div>
                 </div>
-            <div>Private AI</div>    
-            <div className="w-1/3">
-                <div flex space-x-4 className="mb-3 pt-5">
-                    <input size="lg" type="text" placeholder="Enter your text" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
+                <div>
+                <div>Competitor</div>   
+                    <div flex space-x-4 className="mb-3 pt-5">
+                        <input size="lg" type="text" placeholder="Response" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
+                    </div>
                 </div>
-            </div>
-            <div>Competitor</div>   
-            <div className="w-1/3">
-                <div flex space-x-4 className="mb-3 pt-5">
-                    <input size="lg" type="text" placeholder="Enter your text" className="px-8 py-6 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
-                </div>
-            </div>
+            </div>          
             </>
-            
           );
       }
 }
